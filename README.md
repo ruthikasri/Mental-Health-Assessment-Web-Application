@@ -17,8 +17,9 @@ This is a responsive and user-friendly web application designed to help users se
 - Visual Studio Code
 - Git & GitHub
 
-## Project Structure
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/ea3d4a78-d0f8-460a-9d3c-a888f1e5c26a" />
+## Work Flow
+![image](https://github.com/user-attachments/assets/cffce31e-fc88-4414-a0d0-730204818752)
+
 
 
 
