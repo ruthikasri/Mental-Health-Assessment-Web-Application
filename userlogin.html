@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            border: 5px solid #9a1b8d;
+        }
+
+        h2 {
+            color: #9a1b8d;
+            font-weight: normal;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-btn {
+            background-color: #9a1b8d;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #8a1a7d; /* Slightly darker on hover */
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+
+        .logo-container img {
+            height: 220px;
+            width: 250px;
+        }
+
+        .logo-container h1 {
+            align-items: center;
+            font-size: 16px;
+            margin: 0;
+            color: #9a1b8d;
+        }
+
+        .logo-container p {
+            font-size: 12px;
+            color: #9a1b8d;
+        }
+
+        /* Custom styles for labels */
+        label {
+            display: block;
+            text-align: left;
+            color: #9a1b8d; /* Pink color */
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="Mindwell_care.jpeg" alt="Mindwell Care Logo">
+        <h1>MINDWELL CARE</h1>
+        <p>We care about your mental health</p>
+    </div>
+
+    <div class="login-container">
+        <h2>User Login</h2>
+        <form onsubmit="return validateLogin();">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the username and password match
+            if (username === "name" && password === "123") {
+                // Redirect to the home page and store login status
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "home2.html";
+                return false; // Prevent form submission
+            } else {
+                alert("Invalid Username or Password");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+
+</body>
+</html>
