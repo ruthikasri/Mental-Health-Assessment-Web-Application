@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assessment Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            max-height: 100vh; /* Maximum height of the viewport */
+            overflow-y: auto;  /* Allows vertical scrolling */
+        }
+        h1 {
+            color: #512888;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            background-color: #512888;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #421b6e;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            background-color: #512888;
+            padding: 6px;
+            border-radius: 5px;
+            text-align: center;
+            width: 45%;
+        }
+        .navigation a:hover {
+            background-color: #421b6e;
+        }
+        #result {
+            margin-top: 20px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Assessment Test</h1>
+        <form id="assessmentForm">
+            <label for="anxiety">1. How often do you feel anxious?</label>
+            <select id="anxiety" name="anxiety">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="depression">2. How often do you feel depressed?</label>
+            <select id="depression" name="depression">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="sleep">3. How often do you have trouble sleeping?</label>
+            <select id="sleep" name="sleep">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="mood">4. Have you noticed any changes in your mood, thoughts, or behavior?</label>
+            <select id="mood" name="mood">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="traumatic">5. Have you experienced any traumatic events in the past?</label>
+            <select id="traumatic" name="traumatic">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="appetite">6. Are you experiencing any changes in your appetite or eating habits?</label>
+            <select id="appetite" name="appetite">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="thoughts">7. Have you ever had any suicidal thoughts or urges?</label>
+            <select id="thoughts" name="thoughts">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="support">8. Do you feel supported and understood by your loved ones?</label>
+            <select id="support" name="support">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="previousTreatment">9. Have you received any previous mental health treatment or therapy?</label>
+            <select id="previousTreatment" name="previousTreatment">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+
+            <label for="feeling">10. How are you feeling today?</label>
+            <select id="feeling" name="feeling">
+                <option value="healthy">Healthy</option>
+                <option value="unwell">Unwell</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="navigation">
+            <a href="home.html">Home</a>
+            <a href="tm.html">Back to Menu</a>
+        </div>
+
+        <div id="result">
+            <h3>Your Assessment Results</h3>
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("assessmentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            // Collect the values of the selected options
+            var anxiety = document.getElementById("anxiety").value;
+            var depression = document.getElementById("depression").value;
+            var sleep = document.getElementById("sleep").value;
+            var mood = document.getElementById("mood").value;
+            var traumatic = document.getElementById("traumatic").value;
+            var appetite = document.getElementById("appetite").value;
+            var thoughts = document.getElementById("thoughts").value;
+            var support = document.getElementById("support").value;
+            var previousTreatment = document.getElementById("previousTreatment").value;
+            var feeling = document.getElementById("feeling").value;
+
+            // Simple logic to analyze the responses and give a result
+            var resultMessage = "";
+
+            if (thoughts === "often" || thoughts === "sometimes") {
+                resultMessage = "We recommend seeking help from a mental health professional immediately.";
+            } else if (depression === "often" || anxiety === "often" || sleep === "often") {
+                resultMessage = "You might be dealing with mental health challenges. Consider talking to a therapist.";
+            } else if (feeling === "unwell") {
+                resultMessage = "You might be feeling unwell at the moment. It's important to take care of your mental health.";
+            } else {
+                resultMessage = "Your responses suggest you're in a stable state, but it’s always good to check in with a professional.";
+            }
+
+            // Show the result
+            document.getElementById("resultMessage").textContent = resultMessage;
+            document.getElementById("result").style.display = "block";
+        });
+    </script>
+</body>
+</html>
