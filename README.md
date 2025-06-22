@@ -31,9 +31,10 @@ This is a responsive and user-friendly web application designed to help users se
 ## Deployed the Web Application
 
 https://dynamic-froyo-aafe30.netlify.app
-Login Page
-username : name
-password : 123
+//
+# Login Page
+- username : name
+- password : 123
 
 
 ## Preview
