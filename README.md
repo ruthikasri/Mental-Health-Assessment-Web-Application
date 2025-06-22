@@ -13,7 +13,7 @@ This is a responsive and user-friendly web application designed to help users se
 
 - HTML5
 - CSS3
-- (Optional) JavaScript
+- JavaScript
 - Visual Studio Code
 - Git & GitHub
 
@@ -27,6 +27,11 @@ This is a responsive and user-friendly web application designed to help users se
 
 - `index.html` – Home page with therapist matching and navigation
 - `assessment.html` – Mental health self-assessment form
+
+## Deployed the Web Application
+
+https://dynamic-froyo-aafe30.netlify.app
+
 
 ## Preview
 <img width="940" alt="image" src="https://github.com/user-attachments/assets/7e81c74b-e961-46cb-be1f-227cd8d07b25" />
