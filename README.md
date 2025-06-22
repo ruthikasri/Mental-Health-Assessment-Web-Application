@@ -15,7 +15,6 @@ This is a responsive and user-friendly web application designed to help users se
 - CSS3
 - JavaScript
 - Visual Studio Code
-- Git & GitHub
 
 # Work Flow
 ![image](https://github.com/user-attachments/assets/cffce31e-fc88-4414-a0d0-730204818752)
@@ -43,8 +42,8 @@ This is a responsive and user-friendly web application designed to help users se
 # Deployed the Web Application
 
 https://dynamic-froyo-aafe30.netlify.app
-//
-## Login Page
+
+## User Login Page
 - username : name
 - password : 123
 
